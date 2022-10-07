@@ -4,7 +4,7 @@ Module Docstring
 """
 
 __author__ = "Martin Herfurt (trifinite.org)"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __license__ = "MIT"
 
 import argparse
@@ -30,6 +30,7 @@ connectTimeout = 10.0
 
 async def main(args):
     global pending
+    global authCodes
     pending = 0
     #log(3, str(args))
     # check whether mac address is in the right format
@@ -66,6 +67,14 @@ async def main(args):
         sendmessage = prefixbytes + messagebytes
     else:
         sendmessage = messagebytes
+
+    if args.authcodes:
+        text_file = open("auth_codes.txt", "r")
+        authCodes = text_file.readlines()
+        log(3,authCodes)
+        text_file.close()
+
+    print(getHexString(sendmessage))
 
     # establish connection to vehicle
     global client
@@ -194,8 +203,10 @@ async def notification_handler(sender, data):
         # ignore
         print()
     elif temp.HasField("authenticationRequest"):
-        # ignore
-        print()
+        if (len(authCodes)>0):
+            authResponse = bytes.fromhex(authCodes.pop(0).rstrip('\n'))
+            await sendToVehicle(authResponse)
+            log(0,"Sent AuthResponse")
     else:
         output(data)
 
@@ -204,7 +215,7 @@ def log(level,message):
         if level<=args.verbose:
             if args.verbose>1:
                 dt = datetime.now().isoformat()
-                print(dt+" "+message)
+                print(dt+" "+str(message))
             else:
                 print(message)
 
@@ -237,6 +248,9 @@ if __name__ == "__main__":
 
     # Optional argument flag which defaults to False
     parser.add_argument("-o", "--output", default="HEX", help="specifies the output format: BIN, HEX (default), JSON, TXT", required=False)
+
+    # Optional argument flag which defaults to False
+    parser.add_argument("-a", "--authcodes", default="auth_codes.txt", help="specifies filename with pre-recorded auth codes", required=False)
 
     # Optional argument flag which defaults to False
     parser.add_argument("--timeout", default="10", help="specifies the timeout in seconds", required=False)

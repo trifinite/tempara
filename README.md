@@ -1,4 +1,4 @@
-<a href="https://trifinite.org/stuff/tempara/" target="_blank"><img align="right" src="/images/tempara_logo.png"/></a>
+<a href="https://trifinite.org/stuff/tool_tempara/" target="_blank"><img align="right" src="/images/tempara_logo.png"/></a>
 
 # tempara - VCSEC client for Tesla Vehicles
 

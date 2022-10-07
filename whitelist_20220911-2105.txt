@@ -1,0 +1,238 @@
+ _                                       
+| |_ ___ _ __ ___  _ __   __ _ _ __ __ _ 
+| __/ _ \ '_ ` _ \| '_ \ / _` | '__/ _` |
+| ||  __/ | | | | | |_) | (_| | | | (_| |
+ \__\___|_| |_| |_| .__/ \__,_|_|  \__,_|
+                  |_|                    
+
+Author:  Martin Herfurt (trifinite.org)
+Version: 0.1.1
+
+whitelistInfo {
+  numberOfEntries: 10
+  whitelistEntries {
+    publicKeySHA1: "$\206\202d"
+  }
+  whitelistEntries {
+    publicKeySHA1: "S`\031\375"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\032\361\215n"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\200\004\006f"
+  }
+  whitelistEntries {
+    publicKeySHA1: "U\2346\373"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\007\273\036o"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\344\2547!"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\035\2225L"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\205\3022\005"
+  }
+  whitelistEntries {
+    publicKeySHA1: "\034\333Lp"
+  }
+  slotMask: 1983
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "$\206\202d"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\333\243\225\271\237\217:\"\022*yCX\000\3741_\357b\261w\216\315\\\367\313j\037\201wH\006q\204\350\264V\025\0054Sc\305L\356\234\216\343\nZ\033\005>/L\032\214\373W7Q\322\255\244"
+  }
+  keyRole: ROLE_SERVICE
+}
+
+sessionInfo {
+  token: "\256\006Mj\270\237\277Y\310\223\023w\235\221<I\270\375,5"
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "S`\031\375"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\323\332\321U-\320;=\215\014\331\025)C\303c*/\\\024\016\007\207\347dd\r\216Q5\342v\362\360\267\336{\224\354R\376\332\203\243Z\377_\3267D\3577\215V\343P\315A\306\3603}\3027"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_NFC_CARD
+  }
+  slot: 1
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\302 e\177\2302J\350\227\333\241\\\264\234\344\304\216\237W\364"
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\032\361\215n"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\255&\246\332C\221n\310W\3754\326\327\231\r\236\254\3415T\220\322<\256\"\331<\345\205r&\337\320\310\222\371\013\033,p\313\315\244\226U\200)\201%\020\342\212\016!G\262\314\3414\027\356\367Ge"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_NFC_CARD
+  }
+  slot: 2
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\2606\2024\rI\340N\034\306\351Q\025q\202\353\216\032\317q"
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\200\004\006f"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\227\371\227t\277\020\350\375/\262sk\001\363\220\215\037\364\263DF\301W.A\341\017:\013\230(\010\366\364\323\241K\'\333\372\315:[\303F\204\221\360\232\235\327\216`JL\374>\266\326\020;\247/A"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_IOS_DEVICE
+  }
+  slot: 3
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "k\243X\"\310\235%8@\3062OO\335\023\215\017\220\334\351"
+  counter: 16
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "U\2346\373"
+  }
+  publicKey {
+    PublicKeyRaw: "\004>\347\274l[\240\372\030\334h\017\034Z\251\304o\272\202$\320\010N3\374\005\362\032\316#}\323\270\241\262\'\337\375\243\200\316d\245\007\337\266F\017\036\335\201pM\017\254S\022\274\200\320W\210\307\3230"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_ANDROID_DEVICE
+  }
+  slot: 4
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "h\234*\257\022\234o\375\223+\367}\330\030a\021r)/\301"
+  counter: 44
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\007\273\036o"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\005\375\367G]\235\32235\253\255\207\007HL\"\177S\225=]\016\211\237\377Rs)v\370\274\307@#\016]$\276\342\314\024\261\373\2067\342\316\337TA\262\017\330\004\353\353J\337\307\265{\007V\002"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_3_BUTTON_BLE_CAR_KEYFOB_P60
+  }
+  slot: 5
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\0233\234R\232\351\260\347\240\220\013R\222\264\271\235l\232\252\371"
+  counter: 2521
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\344\2547!"
+  }
+  publicKey {
+    PublicKeyRaw: "\004IJC[U\216n\372l\326\244\363\0348\013\311\332H\330\244A\361\364\261\327^x\3452\200\2007\027\214\215\000\273\r\313c\265\016\236\277va\035\032\333V\021\251b|\r\367+!@\034S\212\007\357"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_ANDROID_DEVICE
+  }
+  slot: 7
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\260\000\370\333\210\325Q\361\t\252\206e\007\214\213!\334\216\212?"
+  counter: 85
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\035\2225L"
+  }
+  publicKey {
+    PublicKeyRaw: "\004Tw\330\224[\3005L)\214q\2775\264\372[f\225\323\034\370\307\"\2632p\3465\310Ly\340E\024\265$Y\275\002\007\217\237]{8\320@\305\245\224\334\200q\314\032\r\360K\241_\027\033\310\005"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_ANDROID_DEVICE
+  }
+  slot: 8
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\361\307%)\367wC8\237\364\232\355`\247\300\376\247\'\014O"
+  counter: 3
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\205\3022\005"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\207\326\376\244{8\365\324\263\333,9\363$z\311-t\230\037H\177\003\351\261Dl\243\262\245q]\035l%\322[\266E7\006\303M\";\273p7J\251q\260]\000D\355k\363\372\237U\242\245G"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_ANDROID_DEVICE
+  }
+  slot: 9
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\275ByS\214\335\002\271\362}pC\237\030>{\353\201\206\337"
+  counter: 14
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
+whitelistEntryInfo {
+  keyId {
+    publicKeySHA1: "\034\333Lp"
+  }
+  publicKey {
+    PublicKeyRaw: "\004\340N\004\362\342\031\215\264%\231\232-\303O\351\255=A\'8\1779\333\302\245\004T\322\317r\213\004\267\371T\3041S\335\021aS\232O\336\300\365\256c\265\304\002\333\177\231a\004\317\227\236\327}\207\333"
+  }
+  metadataForKey {
+    keyFormFactor: KEY_FORM_FACTOR_ANDROID_DEVICE
+  }
+  slot: 10
+  keyRole: ROLE_OWNER
+}
+
+sessionInfo {
+  token: "\325\352\313eg\341\255\006\303\026(Q=\306\212\261\315\300$e"
+  counter: 50
+  publicKey: "\004M)d\2136\372\201J\rh\253\354\220cZ\307_\276\320\3568\212G\016\202f\223\025m\267\360\241!}\232\372vH\304_\3532\244\023\016@1hbA\315\276g(+22q\235\3663R.\367"
+}
+
