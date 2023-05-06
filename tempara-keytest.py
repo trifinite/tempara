@@ -4,7 +4,7 @@ Module Docstring
 """
 
 __author__ = "Martin Herfurt (trifinite.org)"
-__version__ = "0.1.3"
+__version__ = "0.1.2"
 __license__ = "MIT"
 
 import argparse
@@ -26,13 +26,11 @@ TeslaServiceUUID =          "00000211-B2D1-43F0-9B88-960CEBF8B91E"
 TeslaToVehicleCharUUID =    "00000212-B2D1-43F0-9B88-960CEBF8B91E"
 TeslaFromVehicleCharUUID =  "00000213-B2D1-43F0-9B88-960CEBF8B91E"
 connectTimeout = 10.0
-receivedmsg = bytearray()
+
 
 async def main(args):
     global pending
     global authCodes
-
-    receivedmsg = bytearray()
     pending = 0
     #log(3, str(args))
     # check whether mac address is in the right format
@@ -142,11 +140,11 @@ def output(out):
         print(out[2 : ])
     elif args.output.upper() == "TXT":
         temp = VCSEC.FromVCSECMessage()
-        temp.ParseFromString(bytes(out[2 : ]))
+        temp.ParseFromString(out[2 : ])
         print(MessageToString(temp, as_utf8=True))
     elif args.output.upper() == "JSON":
         temp = VCSEC.FromVCSECMessage()
-        temp.ParseFromString(bytes(out[2 : ]))
+        temp.ParseFromString(out[2 : ])
         print(MessageToJson(temp))
     else: 
         print(getHexString(out))
@@ -196,33 +194,21 @@ def getSessionDataMessage(keybytes):
     return toVcsecMsg
 
 async def notification_handler(sender, data):
-    log(1,"received message")
-    global receivedmsg
-    length = int(data[0])*256+int(data[1])
-    if (len(data) -2 != length):
-        receivedmsg.extend(data)
+    temp = VCSEC.FromVCSECMessage()
+    temp.ParseFromString(data[2 : ])
+    if (temp.HasField("whitelistInfo") and args.recursive):
+        output(data)
+        await processWhiteListInfo(temp)    
+    elif temp.HasField("vehicleStatus"):
+        # ignore
+        print()
+    elif temp.HasField("authenticationRequest"):
+        if (len(authCodes)>0):
+            authResponse = bytes.fromhex(authCodes.pop(0).rstrip('\n'))
+            await sendToVehicle(authResponse)
+            log(0,"Sent AuthResponse")
     else:
-        receivedmsg.extend(data)
-
-    if (int(receivedmsg[0])*256+int(receivedmsg[1])) == (len(receivedmsg)-2):
-        recvm = receivedmsg;
-        receivedmsg = bytearray()
-        temp = VCSEC.FromVCSECMessage()
-        temp.ParseFromString(bytes(recvm[2 : ]))
-
-        if (temp.HasField("whitelistInfo") and args.recursive):
-            output(recvm)
-            await processWhiteListInfo(temp)    
-        elif temp.HasField("vehicleStatus"):
-            # ignore
-            print()
-        elif temp.HasField("authenticationRequest"):
-            if (len(authCodes)>0):
-                authResponse = bytes.fromhex(authCodes.pop(0).rstrip('\n'))
-                await sendToVehicle(authResponse)
-                log(0,"Sent AuthResponse")
-        else:
-            output(recvm)
+        output(data)
 
 def log(level,message):
     if not args.quiet:
